@@ -1,5 +1,5 @@
 {  "variables": {
-    "project_id": ""
+    "project_id": "$PROJECT_ID"
   },
   "builders": [
     {
