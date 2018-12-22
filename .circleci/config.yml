@@ -13,6 +13,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               echo $AUTH | base64 -d  > ./account.json
+              export $project_id=$PROJECT_ID
               packer build build.json
             fi
           no_output_timeout: 30m
