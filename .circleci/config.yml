@@ -13,7 +13,7 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               echo $AUTH | base64 -d  > ./account.json
-              packer build -force build.json
+              packer build build.json
             fi
           no_output_timeout: 30m
 workflows:
